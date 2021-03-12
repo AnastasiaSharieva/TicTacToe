@@ -1,15 +1,15 @@
-const small_wrapper = document.getElementById('small_wrapper');
+const smallWrapper = document.getElementById('small_wrapper');
 let move = 0;
 let result = '';
 
 
-const modal_wrapper = document.getElementById('modal_wrapper');
+const modalWrapper = document.getElementById('modal_wrapper');
 const content = document.getElementById('content');
 const bord = document.getElementById('bord');
 const btn = document.getElementById('btn');
 
 
-small_wrapper.addEventListener('click', e => {
+smallWrapper.addEventListener('click', e => {
     if(e.target.className = 'box_cell') {
         move % 2 === 0 ? e.target.innerHTML = 'X' : e.target.innerHTML = 'O';
         move++;
@@ -50,11 +50,11 @@ const check = () => {
 
 const prepareResult = victory => {
     content.innerHTML = `Won ${victory} !`;
-    modal_wrapper.style.display = 'block';
+    modalWrapper.style.display = 'block';
 }
 
 const closeModal = () => {
-    modal_wrapper.style.display = 'none';
+    modalWrapper.style.display = 'none';
     location.reload();   
 }
 
